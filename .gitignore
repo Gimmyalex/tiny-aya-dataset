@@ -1,0 +1,10 @@
+venv/
+.env
+dataset/raw/
+massive_data/
+massive.tar.gz
+tmp_read.py
+__pycache__/
+*.pyc
+*.jsonl
+!dataset/tool_calling_dataset.jsonl

@@ -1,0 +1,448 @@
+{
+  "comparison": {
+    "Command A (latest)": {
+      "get_weather": {
+        "examples": [
+          {
+            "user_prompt": "Mama, ekyuma mu Kampala kye ki?",
+            "expected_output": {
+              "name": "get_weather",
+              "arguments": {
+                "location": "Kampala",
+                "unit": "celsius"
+              }
+            }
+          },
+          {
+            "user_prompt": "Taata, obanga ensi e Mukono bulijjo?",
+            "expected_output": {
+              "name": "get_weather",
+              "arguments": {
+                "location": "Mukono",
+                "unit": "celsius"
+              }
+            }
+          },
+          {
+            "user_prompt": "Babirye, weebale okunakuvu ekyuma ky'Entebbe?",
+            "expected_output": {
+              "name": "get_weather",
+              "arguments": {
+                "location": "Entebbe",
+                "unit": "celsius"
+              }
+            }
+          }
+        ],
+        "scores": {
+          "total": 3,
+          "json_valid": 3,
+          "name_correct": 3,
+          "args_complete": 3,
+          "args_required": 3,
+          "json_pct": 100,
+          "name_pct": 100,
+          "args_pct": 100
+        }
+      },
+      "send_message": {
+        "examples": [
+          {
+            "user_prompt": "Mama, njongera Kato kitiibwa nti, 'Oba oyagala okutuula ku kkaawaalwa?'",
+            "expected_output": {
+              "name": "send_message",
+              "arguments": {
+                "recipient": "Kato",
+                "message": "Do you want to come to the party?"
+              }
+            }
+          },
+          {
+            "user_prompt": "Taata, yambala Nakato kitiibwa nti, 'Wanoonyiga gwe gijjula, nze njagala okukutana nawe ekyuma.'",
+            "expected_output": {
+              "name": "send_message",
+              "arguments": {
+                "recipient": "Nakato",
+                "message": "Your car is ready, I want to meet you tomorrow."
+              }
+            }
+          },
+          {
+            "user_prompt": "Babirye, yambala Wasswa kitiibwa nti, 'Gwe wanoonyigwa ku nkola, oba oyinza okunakuvuura?'",
+            "expected_output": {
+              "name": "send_message",
+              "arguments": {
+                "recipient": "Wasswa",
+                "message": "You are invited to the meeting, can you make it?"
+              }
+            }
+          }
+        ],
+        "scores": {
+          "total": 3,
+          "json_valid": 3,
+          "name_correct": 3,
+          "args_complete": 3,
+          "args_required": 3,
+          "json_pct": 100,
+          "name_pct": 100,
+          "args_pct": 100
+        }
+      },
+      "calculate": {
+        "examples": [
+          {
+            "user_prompt": "Mama, weebale nnyo! Nze njagala okubiribwa ekitiibwa kya 20 bwe kugenderra ne 7, kiki ekuba nga ki?",
+            "expected_output": {
+              "name": "calculate",
+              "arguments": {
+                "expression": "20 / 7"
+              }
+            }
+          },
+          {
+            "user_prompt": "Taata, njagala okubiribwa eno: 15 ekugenderra ne 3, kiki ekuba nga ki?",
+            "expected_output": {
+              "name": "calculate",
+              "arguments": {
+                "expression": "15 / 3"
+              }
+            }
+          },
+          {
+            "user_prompt": "Babirye, weebale nnyo! Nze njagala okubiribwa ekitiibwa kya 12 bwe kugenderra ne 4, kiki ekuba nga ki?",
+            "expected_output": {
+              "name": "calculate",
+              "arguments": {
+                "expression": "12 / 4"
+              }
+            }
+          }
+        ],
+        "scores": {
+          "total": 3,
+          "json_valid": 3,
+          "name_correct": 3,
+          "args_complete": 3,
+          "args_required": 3,
+          "json_pct": 100,
+          "name_pct": 100,
+          "args_pct": 100
+        }
+      },
+      "set_reminder": {
+        "examples": [
+          {
+            "user_prompt": "Mama, njogera kumpi kye kuba nze njagala okugenda kw'ekisera eky'omulimi wange awadde 3:00 PM.",
+            "expected_output": {
+              "name": "set_reminder",
+              "arguments": {
+                "message": "Go to the farm",
+                "datetime": "2023-10-05T15:00"
+              }
+            }
+          },
+          {
+            "user_prompt": "Taata, njogera kumpi kye kuba nze njagala okutega ddungi awadde 7:00 AM.",
+            "expected_output": {
+              "name": "set_reminder",
+              "arguments": {
+                "message": "Take medication",
+                "datetime": "2023-10-06T07:00"
+              }
+            }
+          },
+          {
+            "user_prompt": "Nakato, njogera kumpi kye kuba nze njagala okugenda kw'ekisera eky'omuwendo wange awadde 6:00 PM.",
+            "expected_output": {
+              "name": "set_reminder",
+              "arguments": {
+                "message": "Attend meeting",
+                "datetime": "2023-10-06T18:00"
+              }
+            }
+          }
+        ],
+        "scores": {
+          "total": 3,
+          "json_valid": 3,
+          "name_correct": 3,
+          "args_complete": 3,
+          "args_required": 3,
+          "json_pct": 100,
+          "name_pct": 100,
+          "args_pct": 100
+        }
+      },
+      "convert_currency": {
+        "examples": [
+          {
+            "user_prompt": "Mama, nze njagala okubilwa amawunti 100,000 ga Uganda sshillingi mu doola ya America.",
+            "expected_output": {
+              "name": "convert_currency",
+              "arguments": {
+                "amount": 100000,
+                "from_currency": "UGX",
+                "to_currency": "USD"
+              }
+            }
+          },
+          {
+            "user_prompt": "Taata, nnyamba nnyuweereze amawunti 50 ga doola mu euro, kiki?",
+            "expected_output": {
+              "name": "convert_currency",
+              "arguments": {
+                "amount": 50,
+                "from_currency": "USD",
+                "to_currency": "EUR"
+              }
+            }
+          },
+          {
+            "user_prompt": "Babirye, weebereze amawunti 200,000 ga Uganda sshillingi mu pauni za Ugangale.",
+            "expected_output": {
+              "name": "convert_currency",
+              "arguments": {
+                "amount": 200000,
+                "from_currency": "UGX",
+                "to_currency": "GBP"
+              }
+            }
+          }
+        ],
+        "scores": {
+          "total": 3,
+          "json_valid": 3,
+          "name_correct": 3,
+          "args_complete": 3,
+          "args_required": 3,
+          "json_pct": 100,
+          "name_pct": 100,
+          "args_pct": 100
+        }
+      }
+    },
+    "Command A Translate": {
+      "get_weather": {
+        "examples": [
+          {
+            "user_prompt": "Mama, lina lya Kampala luli lwanyisa?",
+            "expected_output": {
+              "name": "get_weather",
+              "arguments": {
+                "location": "Kampala",
+                "unit": "celsius"
+              }
+            }
+          },
+          {
+            "user_prompt": "Taata, wano Mukono temparatura kye ki?",
+            "expected_output": {
+              "name": "get_weather",
+              "arguments": {
+                "location": "Mukono",
+                "unit": "celsius"
+              }
+            }
+          },
+          {
+            "user_prompt": "Babirye, omukisa gwa Entebbe buli kiro gwe ki?",
+            "expected_output": {
+              "name": "get_weather",
+              "arguments": {
+                "location": "Entebbe",
+                "unit": "celsius"
+              }
+            }
+          }
+        ],
+        "scores": {
+          "total": 3,
+          "json_valid": 3,
+          "name_correct": 3,
+          "args_complete": 3,
+          "args_required": 3,
+          "json_pct": 100,
+          "name_pct": 100,
+          "args_pct": 100
+        }
+      },
+      "send_message": {
+        "examples": [
+          {
+            "user_prompt": "Mama, njizze Kato sms mukwano oti 'Ekyokya kye kya bulungi, nnooyi?'",
+            "expected_output": {
+              "name": "send_message",
+              "arguments": {
+                "recipient": "Kato",
+                "message": "Ekyokya kye kya bulungi, nnooyi?"
+              }
+            }
+          },
+          {
+            "user_prompt": "Taata, njizze Nakato sms oti 'Nze njoloba, nnooyi mujja kuggwa?'",
+            "expected_output": {
+              "name": "send_message",
+              "arguments": {
+                "recipient": "Nakato",
+                "message": "Nze njoloba, nnooyi mujja kuggwa?"
+              }
+            }
+          },
+          {
+            "user_prompt": "Babirye, njizze Wasswa sms mukwano oti 'Wano gwensiga, nnooyi olina ddigi?'",
+            "expected_output": {
+              "name": "send_message",
+              "arguments": {
+                "recipient": "Wasswa",
+                "message": "Wano gwensiga, nnooyi olina ddigi?"
+              }
+            }
+          }
+        ],
+        "scores": {
+          "total": 3,
+          "json_valid": 3,
+          "name_correct": 3,
+          "args_complete": 3,
+          "args_required": 3,
+          "json_pct": 100,
+          "name_pct": 100,
+          "args_pct": 100
+        }
+      },
+      "calculate": {
+        "examples": [
+          {
+            "user_prompt": "Mama, nze njagala okubiribwa ku ngeri y'okwewala 150000 ku 300. Olowooza nga biki?",
+            "expected_output": {
+              "name": "calculate",
+              "arguments": {
+                "expression": "150000 / 300"
+              }
+            }
+          },
+          {
+            "user_prompt": "Taata, njagala okubiribwa ku ngeri y'okwewala 200 ne 300 ne kubuulira ne 50. Olowooza nga biki?",
+            "expected_output": {
+              "name": "calculate",
+              "arguments": {
+                "expression": "(200 + 300) + 50"
+              }
+            }
+          },
+          {
+            "user_prompt": "Babirye, njagala okubiribwa ku ngeri y'okwewala 10000 ku 4 ne kubuulira ne 2500. Olowooza nga biki?",
+            "expected_output": {
+              "name": "calculate",
+              "arguments": {
+                "expression": "(10000 / 4) + 2500"
+              }
+            }
+          }
+        ],
+        "scores": {
+          "total": 3,
+          "json_valid": 3,
+          "name_correct": 3,
+          "args_complete": 3,
+          "args_required": 3,
+          "json_pct": 100,
+          "name_pct": 100,
+          "args_pct": 100
+        }
+      },
+      "set_reminder": {
+        "examples": [
+          {
+            "user_prompt": "Mama, lwaki toleesa ekkubo ekisukkulumizwa ne ddati omwaka ogenda ku 15:00?",
+            "expected_output": {
+              "name": "set_reminder",
+              "arguments": {
+                "message": "Send out the monthly report",
+                "datetime": "2024-05-15T15:00"
+              }
+            }
+          },
+          {
+            "user_prompt": "Taata, kkindi tusabe omukozii okutuma ekkubo erya ddati omwaka ku 08:30?",
+            "expected_output": {
+              "name": "set_reminder",
+              "arguments": {
+                "message": "Ask the neighbor to send the package",
+                "datetime": "2024-05-16T08:30"
+              }
+            }
+          },
+          {
+            "user_prompt": "Babirye, olaba nti nze nnalaba akatale ku 10:00? Kkindi tusabe omukozii okutuma ekkubo.",
+            "expected_output": {
+              "name": "set_reminder",
+              "arguments": {
+                "message": "Remind me to call the client",
+                "datetime": "2024-05-17T10:00"
+              }
+            }
+          }
+        ],
+        "scores": {
+          "total": 3,
+          "json_valid": 3,
+          "name_correct": 3,
+          "args_complete": 3,
+          "args_required": 3,
+          "json_pct": 100,
+          "name_pct": 100,
+          "args_pct": 100
+        }
+      },
+      "convert_currency": {
+        "examples": [
+          {
+            "user_prompt": "Mama, nze njagala okweka 50,000 Usheringi mu Dollar, ekyo kiba kiki?",
+            "expected_output": {
+              "name": "convert_currency",
+              "arguments": {
+                "amount": 50000,
+                "from_currency": "UGX",
+                "to_currency": "USD"
+              }
+            }
+          },
+          {
+            "user_prompt": "Taata, olimu lya 100 Euro liba liki mu Shilling za Uganda?",
+            "expected_output": {
+              "name": "convert_currency",
+              "arguments": {
+                "amount": 100,
+                "from_currency": "EUR",
+                "to_currency": "UGX"
+              }
+            }
+          },
+          {
+            "user_prompt": "Nakato, 200,000 Usheringi biba biki mu Pound za Uingereza?",
+            "expected_output": {
+              "name": "convert_currency",
+              "arguments": {
+                "amount": 200000,
+                "from_currency": "UGX",
+                "to_currency": "GBP"
+              }
+            }
+          }
+        ],
+        "scores": {
+          "total": 3,
+          "json_valid": 3,
+          "name_correct": 3,
+          "args_complete": 3,
+          "args_required": 3,
+          "json_pct": 100,
+          "name_pct": 100,
+          "args_pct": 100
+        }
+      }
+    }
+  }
+}
